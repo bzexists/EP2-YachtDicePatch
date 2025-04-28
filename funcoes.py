@@ -5,3 +5,9 @@ def rolar_dados(n):
     for _ in range(n):
         lista.append(random.randint(1, 6))
     return lista
+
+def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
+    valor = dados_rolados[dado_para_guardar]
+    dados_rolados.pop(dado_para_guardar)
+    dados_no_estoque.append(valor)
+    return [dados_rolados, dados_no_estoque]
